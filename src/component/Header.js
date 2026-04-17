@@ -1,23 +1,34 @@
-function Header(){
+function Header() {
     return (
-        <div className="heading">
-            <img  className = "images" src = "data:image/jpeg;base64,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"/>
-            <div className="options">
-                <button className="but">MEn</button>
+        <div className="heading" style={{
+            display: "flex",
+            alignItems: "center",
+            padding: "10px 20px",
+            borderBottom: "1px solid #eee",
+            gap: "20px",
+            flexWrap: "wrap"
+        }}>
+            <img className="images" style={{ width: "80px" }}
+                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBEQACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABgEDBQcIBAL/xABNEAABAwICBQYICgYIBwAAAAABAAIDBAUGEQcSITFBE1FhcYGRFCI2QnWUs9EIFRcyUlRVk6HTFiMmM0XBQ3KSsbLC4fEkRGKCotLw/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAECAwUGBAf/xAAwEQEAAgECBQIEBAcBAAAAAAAAAQIDBBEFEiExQRNRIjKxwRRxkeEGI2GBodHwYv/aAAwDAQACEQMRAD8A0agICAgICAgICAgICAgICAgICAgICAg99os9xvVSKa1UU9XN9GJhOXSTuA60E5odCmL6qIPlbQ0hPmz1G3/xDlOw9J0F4pH/ADlo++k/LTZG6nyGYq+t2n76T8tTym58hmKfrlp++k/LTlN1PkNxT9ctP30n5acpufIbin65afvpPy05ZNz5DcU/XLT99J+WnLJufIbin65afvpPy05Tc+QzFP1y0/fSflpym47QdioDMVVqPQJpP/ROU3R2+6OMVWKN0tZapJIG75aYiVoHOctoHWFG0pRM71AogICAgIJ7ov0d1OMqx1RVOfT2mB2Uso+dKfoM6ec8EHSlksdusVCyitVJFTQMHzWDaekneT0lBkdUIGQQMggZIGqFO4aoTcNUJuGqE3DVCbhqhNxQsB4JvI1npH0V0GIYZa60Rx0d2aCfFGrHUdDhwP8A1d+anuhzjWU09HUy01VE6KeJ5ZJG8ZFrhvBVUrCAgIPdZLZNebtR22lbnNVTNjaebM7T1AbUgdg4dtNLY7RS2yhjDIKeMNAyy1jxceknMnrUyMooBAQEBAQEBAQEBAQfL8stqDRPwgcLRxup8SUkYaXuEFXqjefMee7I9itMdN0NKKqRAQbF0D0bKrHrJJBn4LSyTN2cdjf8ytXuiXTUe5RKVxQCChKDVmLsU1F1q5KK21MkFujOqZIHlr6h3HxhtDQebf1LLTFE0nLftET/AHdPw3hVa1jLmjeZ8PFh6prrYDUWyomJY/N9NNK58cw5sifFPMR25rl8fE8kZd7fLP8Ahn1uixZOm2zatpr4LpQQ1tMTycrc8nDItO4tI4EHMFdDW0WrFocplx2x3mlu8PWdysoh2LL5UuqjabXMYS0A1VS..."/>
+            <div className="options" style={{ display: "flex", gap: "10px" }}>
+                <button className="but">Men</button>
                 <button className="but">Women</button>
-                <button className="but">Child</button>
-                <button className="but">kids</button>
-                <button className="but">beatu nd studo </button>
-                <button className="but">hom end linbivng</button>
+                <button className="but">Kids</button>
+                <button className="but">Beauty & Studio</button>
+                <button className="but">Home & Living</button>
             </div>
-            <input className="search" placeholder="seach for prducts nd brands "></input>
-            <div className="profile">
-                <button className="pro">profile</button>
-                <button className="pro">whishlist</button>
-                <button className="pro">bag</button>
+            <input className="search" placeholder="Search for products and brands" style={{
+                padding: "8px 15px",
+                borderRadius: "4px",
+                border: "1px solid #ddd",
+                width: "250px"
+            }} />
+            <div className="profile" style={{ display: "flex", gap: "10px" }}>
+                <button className="pro">Profile</button>
+                <button className="pro">Wishlist</button>
+                <button className="pro">Bag</button>
             </div>
-
         </div>
-    )
+    );
 }
 export default Header;
